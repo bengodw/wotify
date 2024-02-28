@@ -1,5 +1,5 @@
 # Topsters for Spotify
-Ben's Spotify project
+Create and download topsters based on your Spotify listening data!
 
 This is a draft of a site that creates a topster of your favourite artists over the past 6 months!
 
