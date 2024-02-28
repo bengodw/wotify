@@ -10,7 +10,7 @@ To run this project you will need:
 
 ## Usage
 
-Clone the repository, ensure that you are in the `get_user_profile` directory and run:
+Clone the repository, ensure that you are in the `app` directory and run:
 
 ```bash
 npm install
