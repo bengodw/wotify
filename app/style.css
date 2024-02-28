@@ -1,0 +1,113 @@
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (min-width: 1025px) {
+    #main {
+        flex-direction: row;
+    }
+}
+
+.nav-link {
+    color: black !important;
+}
+
+#login {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* SONGS LIST */
+
+#songs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 4px;
+
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: white;
+    background-color: black;
+    max-width: 600px;
+    margin: 20px;
+}
+
+#listHeading {
+    font-size: 300%;
+    text-align: center;
+    margin-top: 4px;
+    width: 100%;
+    background-color: black;
+}
+
+.songsList {
+    display: grid;
+
+    width: 100%;
+    grid-gap: 4px;
+    margin-top: 4px;
+
+    text-shadow:
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
+
+    font-size: 70%;
+}
+
+.songsList > div::before {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+}
+
+.songsList > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    padding: 4px;
+    width: 100%;
+}
+
+
+#songsList1 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#songsList2 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+#songsList3 {
+    grid-template-columns: repeat(8, 1fr);
+    margin-bottom: 4px;
+}
+
+#spotify-logo {
+    width: 30%;
+    padding: 30px;
+}
+
+/* DOWNLOAD */
+
+#download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 60px;
+}
