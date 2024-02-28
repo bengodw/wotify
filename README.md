@@ -8,7 +8,7 @@ This is a draft of a site that creates a topster of your favourite artists over 
 To run this project you will need:
 
 - A [Node.js LTS](https://nodejs.org/en/) environment or later.
-- A [Spotify Account]
+- A Spotify Account
 
 ## Usage
 
