@@ -1,2 +1,2 @@
-# wotify
-ben's Spotify project
+# Topsters for Spotify
+Ben's Spotify project
