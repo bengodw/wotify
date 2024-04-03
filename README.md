@@ -1,7 +1,7 @@
 # Topsters for Spotify (draft)
 Create and download topsters based on your Spotify listening data!
 
-![Topster](https://github.com/bengodw/topsters-for-spotify/blob/master/example.png?raw=true))
+![Topster](./Example.png)
 
 ## Pre-requisites
 
