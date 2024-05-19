@@ -51,10 +51,10 @@ function populateUI(profile: UserProfile, songs: any) {
 }
 
 document.getElementById('download-button')!.addEventListener('click', () => {
-    domtoimage.toJpeg(document.getElementById('songs')!, { quality: 0.95 })
+    domtoimage.toJpeg(document.getElementById('songs')!, { quality: 1 })
     .then(function (dataUrl) {
         var link = document.createElement('a');
-        link.download = 'my-image-name.jpeg';
+        link.download = 'Topster.jpeg';
         link.href = dataUrl;
         link.click();
     });

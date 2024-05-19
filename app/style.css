@@ -35,6 +35,9 @@
     color: white;
     background-color: black;
     max-width: 600px;
+}
+
+#songs-wrapper {
     margin: 20px;
 }
 

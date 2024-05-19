@@ -10,6 +10,8 @@ To run this project you will need:
 - A [Node.js LTS](https://nodejs.org/en/) environment or later.
 - A Spotify Account
 
+This project will run best on Google Chrome
+
 ## Usage
 
 Clone the repository, ensure that you are in the `app` directory and run:
