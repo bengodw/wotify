@@ -17,7 +17,6 @@ export async function redirectToAuthCodeFlow(clientId: string) {
 
 export async function getAccessToken(clientId: string, code: string) {
     const verifier = localStorage.getItem("verifier");
-
     const params = new URLSearchParams();
     params.append("client_id", clientId);
     params.append("grant_type", "authorization_code");

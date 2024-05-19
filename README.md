@@ -21,3 +21,8 @@ npm install
 npm run dev
 ```
 
+## Features coming soon
+- A backend to enable secure storage of tokens in HTTP only cookies, thus allowing multiple pages
+- Adding persistence to backend - can see what has changed from last visit
+- Song topsters using album covers
+- Make further artist recommendations

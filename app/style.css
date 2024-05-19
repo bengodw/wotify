@@ -1,4 +1,4 @@
-#main {
+body > * {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,6 +10,11 @@
         flex-direction: row;
     }
 }
+
+#main-invalid {
+    display: none;
+}
+
 
 .nav-link {
     color: black !important;
@@ -37,14 +42,24 @@
     max-width: 600px;
 }
 
+#songs-template {
+    display: none;
+}
+
 #songs-wrapper {
-    margin: 20px;
+    margin: '20px'
 }
 
 #listHeading {
     font-size: 300%;
     text-align: center;
     margin-top: 4px;
+    width: 100%;
+    background-color: black;
+}
+
+#listSubHeading {
+    text-align: center;
     width: 100%;
     background-color: black;
 }
@@ -107,10 +122,12 @@
 
 /* DOWNLOAD */
 
-#download {
+#menu > * {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 30px 60px;
+    padding: 20px 60px;
+    gap: 5px;
+    font-size: 120%
 }

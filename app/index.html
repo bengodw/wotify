@@ -12,16 +12,14 @@
 <body>
   <ul id="dashboard-header" class="nav bg-light">
     <li class="nav-item">
-      <a class="nav-link" href="#">Topsters for spotify</a>
-    </li>
-    <li id="login" class="nav-item">
-      <a class="nav-link" href="#">Log out</a>
+      <a class="nav-link" href="#">Topsters for Spotify</a>
     </li>
   </ul>
-  <section id = "main">
-    <section id="songs-wrapper">
+  <section id="main">
+    <section id="songs-template">
       <section id="songs">
         <span id="listHeading"></span>
+        <span id="listSubHeading"></span>
         <div class="songsList" id="songsList1"></div>
         <div class="songsList" id="songsList2"></div>
         <div class="songsList" id="songsList3"></div>
@@ -29,9 +27,35 @@
         <img id="spotify-logo" src="assets/Spotify_Logo_RGB_White.png" />
       </section>
     </section>
-    <section id ="download">
-      Click here to download your topster: <button id="download-button" class="btn btn-dark">Download </button>
+    <section id="menu">
+      <section id="download">
+        Click here to download your topster: <button id="download-button" class="btn btn-dark">Download </button>
+      </section>
+      <section id="select-time-period">
+        Select time period:
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="btnradio" id="timeperiod1" autocomplete="off" checked>
+          <label class="btn btn-outline-primary" for="timeperiod1">Last Month</label>
+
+          <input type="radio" class="btn-check" name="btnradio" id="timeperiod2" autocomplete="off">
+          <label class="btn btn-outline-primary" for="timeperiod2">Last 6 Months</label>
+
+          <input type="radio" class="btn-check" name="btnradio" id="timeperiod3" autocomplete="off">
+          <label class="btn btn-outline-primary" for="timeperiod3">Last Year</label>
+        </div>
+      </section>
+      <section id="display-names">
+        Toggle display of names:
+        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+          <input type="checkbox" class="btn-check" id="togglenames" autocomplete="off">
+          <label class="btn btn-outline-primary" for="togglenames">Display Names</label>
+        </div>
+      </section>
     </section>
+
+  </section>
+  <section id="main-invalid">
+    Session invalidated - Please login again
   </section>
 
 </body>
