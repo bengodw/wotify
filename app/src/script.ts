@@ -59,10 +59,10 @@ function populateUI() {
     document.getElementById('songs-wrapper')?.remove()
     const songs = songsResponseList[timePeriod]
     const songsElement = document.getElementById("songs-template")!.cloneNode(true) as HTMLElement;
-    songsElement.setAttribute('id', "songs-wrapper");
+    songsElement.setAttribute("id", "songs-wrapper");
     document.getElementById("main")!.prepend(songsElement);
     songsElement.style.display = "flex";
-    document.getElementById("listHeading")!.innerText = (profileResponse.display_name + "'s Top 50 Artists!");
+    document.getElementById("listHeading")!.innerText = (profileResponse.display_name + "'s Top 50 Artists");
     var timePeriodString
     switch (timePeriod) {
         case 0:
