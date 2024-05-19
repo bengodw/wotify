@@ -1,4 +1,4 @@
-# Topsters for Spotify (draft)
+# Topsters for Spotify
 Create and download topsters based on your Spotify listening data!
 
 ![Topster](./Example.png)
