@@ -11,19 +11,15 @@ body > * {
     }
 }
 
-#main-invalid {
+#main-invalid, #main-login {
     display: none;
+    height: 500px;
 }
-
 
 .nav-link {
     color: black !important;
 }
 
-#login {
-    margin-left: auto;
-    margin-right: 0;
-}
 
 /* SONGS LIST */
 

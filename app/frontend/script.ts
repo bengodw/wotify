@@ -1,30 +1,39 @@
-// Because this is a literal single page application
-// we detect a callback from Spotify by checking for the hash fragment
-import { redirectToAuthCodeFlow, getAccessToken } from "./authCodeWithPkce";
 import domtoimage from 'dom-to-image';
 
-const clientId = "72faa4220b0b419aa73bb90e5c43c987";
-const params = new URLSearchParams(window.location.search);
-const code = params.get("code");
+var params = getHashParams();
+var access_token = params.access_token,
+    error = params.error;
 
 var showNames = false;
 var timePeriod = 0;
 var profileResponse: UserProfile;
 var songsResponseList: any[] = [];
 
-if (!code) {
-    redirectToAuthCodeFlow(clientId);
+if (error) {
+    alert('There was an error during the authentication');
 } else {
-    const accessToken = await getAccessToken(clientId, code);
-    if (!accessToken) {
-        const main = document.getElementById("main");
-        if (main) main.style.display = "none";
-        const mainInvalid = document.getElementById("main-invalid");
-        if (mainInvalid) mainInvalid.style.display = "flex";
+    if (access_token) {
+        document.getElementById("main")!.style.display = "flex";
+        document.getElementById("main-login")!.style.display = "none";
+        for (var i of [0, 1, 2]) songsResponseList.push(await fetchSongs(access_token, i))
+        profileResponse = await fetchProfile(access_token);
+        populateUI();
+    } else {
+        console.log(params)
+        document.getElementById("main-login")!.style.display = "flex";
+        document.getElementById("main")!.style.display = "none";
     }
-    for (var i of [0, 1, 2]) songsResponseList.push(await fetchSongs(accessToken, i))
-    profileResponse = await fetchProfile(accessToken);
-    populateUI();
+}
+
+
+function getHashParams() {
+    var hashParams: { [id: string] : string; } = {}
+    var e, r = /([^&;=]+)=?([^&;]*)/g,
+        q = window.location.hash.substring(1);
+    while (e = r.exec(q)) {
+        hashParams[e[1]] = decodeURIComponent(e[2]);
+    }
+    return hashParams;
 }
 
 async function fetchProfile(code: string): Promise<UserProfile> {
